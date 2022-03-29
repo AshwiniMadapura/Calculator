@@ -1,0 +1,20 @@
+.typeArea{
+    height: 91px;
+    margin: 10px auto;
+    width: 99%;
+    border: 2px solid black;
+}
+.buttonRow{
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttonDesign{
+    height: 80px;
+    width: 100px;
+}
+.buttonDesign0{
+    height: 80px;
+    width: 50%;
+}

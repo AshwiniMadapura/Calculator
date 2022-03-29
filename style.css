@@ -1,8 +1,14 @@
-.typeArea{
+#typeArea{
+    height: 85px;
+    /* margin: 10px auto; */
+    width: 99%;
+    /* border: 2px solid black; */
+}
+#display{
     height: 91px;
     margin: 10px auto;
     width: 99%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .buttonRow{
     height: 120px;

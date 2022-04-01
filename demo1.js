@@ -13,6 +13,8 @@ const eqButton=document.querySelectorAll(".eqOperator")
         item.addEventListener("click",evalFunc);
 })
 
+
+
 // const clearButton=document.getElementById("clear")
 //     clearButton.forEach(item=>{
 //     item.addEventListener("click",clickClear);
@@ -21,19 +23,28 @@ const eqButton=document.querySelectorAll(".eqOperator")
 // function clickClear(){
 //     document.getElementById("result").value="";
 // }
+// document.getElementById("clear").addEventListener("click",()=>{
+//     document.getElementById("result").value="";
+// })
 
-let clear=document.getElementById("clear")
-clear.addEventListener("click",()=>{
-    document.getElementById("result").value="";
-})
+// let clear=document.getElementById("clear")
+// clear.addEventListener("click",()=>{
+//     document.getElementById("result").value="";
+// })
 
 let num_array = []
 let flag1=true
 
+let clear=document.getElementById("clear").addEventListener("click",()=>{
+    if(document.getElementById("result").value="AC"){
+    document.getElementById("result").value="";
+    num_array=[];
+    oper_array=[];
+    console.log(num_array)  
+}
+})
+
 function clickNumber(){
-    // if(this.value=="AC"){
-    //     document.getElementById("result").value="";
-    // }
     
     if(flag1==true){
         document.getElementById("result").value+=this.value;
@@ -76,6 +87,7 @@ function evalFunc(){
     let totalValue = num_array[0];
     console.log(num_array)
     for(i=0;i<num_array.length-1;i++){
+
         if (oper_array[i] == "+"){
             totalValue = totalValue + num_array[i+1];
         }

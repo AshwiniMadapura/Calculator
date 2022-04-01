@@ -77,3 +77,11 @@ function evalFunc(){
     }
     document.getElementById("result").value = totalValue;
 }
+let clear=document.getElementById("clear").addEventListener("click",()=>{
+    if(document.getElementById("result").value="AC"){
+    document.getElementById("result").value="";
+    num_array=[];
+    oper_array=[];
+    console.log(num_array)  
+}
+})

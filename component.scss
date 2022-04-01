@@ -1,0 +1,103 @@
+// .bottonSection{
+//     height: 500px;
+// }
+
+@media(min-width:350px){
+    .buttonDesign{
+        height: 40px;
+        width: 60px;
+        background-color: $color-button-number;
+        font-family: 'Work Sans';
+        font-weight: 700;
+        font-size: 30px;
+        border-radius: 30%;
+        
+    }
+}
+.buttonRow{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#result{
+    height: 85px;
+    width: 98%;
+    border-radius: 3%;
+}
+.buttonDesign{
+    height: 50px;
+    width: 80px;
+    background-color: $color-button-number;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 30%;
+    
+}
+.operator{
+    height: 50px;
+    width: 80px;
+    background-color: $color-button-number;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 30%;
+}
+.eqOperator{
+    height: 50px;
+    width: 50%;
+    background-color: $color-button-number;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 10%;
+}
+#result{
+    background-color: $color-black;
+    color: $color-white;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 30px;
+}
+
+// @media (max-width:500px){
+//     #result{
+//         height: 50px;
+//         width: 99%;
+//     }
+//     .buttonDesign{
+//         height: 50px;
+//         width: 70px;
+//         background-color: $color-button-number;
+//         font-family: 'Work Sans';
+//         font-weight: 500;
+//         font-size: 20px;
+//         border-radius: 90%;
+        
+//     }
+//     .operator{
+//         height: 80px;
+//         width: 100px;
+//         background-color: $color-button-number;
+//         font-family: 'Work Sans';
+//         font-weight: 700;
+//         font-size: 30px;
+//     }
+//     .eqOperator{
+//         height: 80px;
+//         width: 50%;
+//         background-color: $color-button-number;
+//         font-family: 'Work Sans';
+//         font-weight: 700;
+//         font-size: 30px;
+//     }
+//     #result{
+//         background-color: $color-black;
+//         color: $color-white;
+//         font-family: 'Work Sans';
+//         font-weight: 700;
+//         font-size: 30px;
+//     }
+
+// }

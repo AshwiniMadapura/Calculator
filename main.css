@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 600px;
+  width: 400px;
+  background-color: black;
+  border-radius: 3%;
+}
+
+@media (min-width: 350px) {
+  .main {
+    height: 600px;
+    width: 350px;
+  }
+}
+@media (min-width: 350px) {
+  .buttonDesign {
+    height: 40px;
+    width: 60px;
+    background-color: #888679;
+    font-family: "Work Sans";
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 30%;
+  }
+}
+.buttonRow {
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#result {
+  height: 85px;
+  width: 98%;
+  border-radius: 3%;
+}
+
+.buttonDesign {
+  height: 50px;
+  width: 80px;
+  background-color: #888679;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 30%;
+}
+
+.operator {
+  height: 50px;
+  width: 80px;
+  background-color: #888679;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 30%;
+}
+
+.eqOperator {
+  height: 50px;
+  width: 50%;
+  background-color: #888679;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 10%;
+}
+
+#result {
+  background-color: black;
+  color: #fefefe;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 30px;
+}

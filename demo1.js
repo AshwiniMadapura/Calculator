@@ -13,10 +13,28 @@ const eqButton=document.querySelectorAll(".eqOperator")
         item.addEventListener("click",evalFunc);
 })
 
+// const clearButton=document.getElementById("clear")
+//     clearButton.forEach(item=>{
+//     item.addEventListener("click",clickClear);
+//     })
+
+// function clickClear(){
+//     document.getElementById("result").value="";
+// }
+
+let clear=document.getElementById("clear")
+clear.addEventListener("click",()=>{
+    document.getElementById("result").value="";
+})
+
 let num_array = []
 let flag1=true
 
 function clickNumber(){
+    // if(this.value=="AC"){
+    //     document.getElementById("result").value="";
+    // }
+    
     if(flag1==true){
         document.getElementById("result").value+=this.value;
         if(num_array.length==0){ 

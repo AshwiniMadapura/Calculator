@@ -5,25 +5,18 @@
     // font-family: $font-body;
 }
 
-$color-button-number:rgb(136, 134, 121);
-$color-black:black;
+// $color-button-number:rgb(48, 47, 43);
+$color-button-number:#4C4743;
+$color-black:rgb(19, 18, 18);
 $color-white:#fefefe;
 
 .main{
-    height: 600px;
+    height: 500px;
     width: 400px;
     // height: 100%;
     background-color: $color-black;
     border-radius: 3%;
 }
 
-@media(min-width:350px){
 
-    .main{
-        // width: ;
-        // height: 100%;
-        height: 600px;
-        width: 350px;
-    }
 
-}

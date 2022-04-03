@@ -4,29 +4,12 @@
 }
 
 .main {
-  height: 600px;
+  height: 500px;
   width: 400px;
-  background-color: black;
+  background-color: #131212;
   border-radius: 3%;
 }
 
-@media (min-width: 350px) {
-  .main {
-    height: 600px;
-    width: 350px;
-  }
-}
-@media (min-width: 350px) {
-  .buttonDesign {
-    height: 40px;
-    width: 60px;
-    background-color: #888679;
-    font-family: "Work Sans";
-    font-weight: 700;
-    font-size: 30px;
-    border-radius: 30%;
-  }
-}
 .buttonRow {
   height: 80px;
   display: flex;
@@ -36,44 +19,61 @@
 
 #result {
   height: 85px;
-  width: 98%;
+  width: 99%;
   border-radius: 3%;
-}
-
-.buttonDesign {
-  height: 50px;
-  width: 80px;
-  background-color: #888679;
+  background-color: #131212;
+  color: #fefefe;
   font-family: "Work Sans";
   font-weight: 700;
   font-size: 30px;
-  border-radius: 30%;
+}
+
+.buttonDesign {
+  height: 60px;
+  width: 60px;
+  background-color: #4C4743;
+  font-family: "Work Sans";
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 50%;
+  color: #fefefe;
 }
 
 .operator {
   height: 50px;
   width: 80px;
-  background-color: #888679;
-  font-family: "Work Sans";
+  background-color: #F7AC31;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 30%;
 }
 
 .eqOperator {
   height: 50px;
   width: 50%;
-  background-color: #888679;
+  background-color: #CDCEC9;
   font-family: "Work Sans";
   font-weight: 700;
   font-size: 30px;
   border-radius: 10%;
 }
 
-#result {
-  background-color: black;
-  color: #fefefe;
-  font-family: "Work Sans";
+#negative {
+  height: 50px;
+  width: 80px;
+  background-color: #F7AC31;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 30px;
+  border-radius: 30%;
+}
+
+@media (max-width: 400px) {
+  .main {
+    height: auto;
+    width: auto;
+  }
 }

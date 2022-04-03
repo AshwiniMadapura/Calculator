@@ -1,11 +1,8 @@
 *{
-    // margin: 10px;
     padding: 0;
     box-sizing: border-box;
-    // font-family: $font-body;
 }
 
-// $color-button-number:rgb(48, 47, 43);
 $color-button-number:#4C4743;
 $color-black:rgb(19, 18, 18);
 $color-white:#fefefe;
@@ -13,7 +10,6 @@ $color-white:#fefefe;
 .main{
     height: 500px;
     width: 400px;
-    // height: 100%;
     background-color: $color-black;
     border-radius: 3%;
 }

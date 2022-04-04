@@ -5,83 +5,86 @@ const numButtons=document.querySelectorAll(".buttonDesign")
 
 const opeButtons=document.querySelectorAll(".operator")
     opeButtons.forEach(item=>{
-        item.addEventListener("click",clickOperations);
+        item.addEventListener("click",clickOperator);
 })
 
 const eqButton=document.querySelectorAll(".eqOperator")
     eqButton.forEach(item=>{
-        item.addEventListener("click",evalFunc);
+        item.addEventListener("click",performOperation);
 })
 
-let num_array = []
+let numberArray = []
 let flag1=true
 
 function clickNumber(){
     if(flag1==true){
         document.getElementById("result").value+=this.value;
-        if(num_array.length==0){ 
-                num_array[0]=this.value;
+        if(numberArray.length==0){ 
+                numberArray[0]=this.value;
             }
         else{
             if(this.value == "."){
-                let newVal=num_array[num_array.length-1]+this.value;
-                num_array[num_array.length-1]=newVal;       
+                let newVal=numberArray[numberArray.length-1]+this.value;
+                numberArray[numberArray.length-1]=newVal;       
             }
             else if(this.value == "+-"){
-                let newVal=0 - num_array[num_array.length-1];
-                console.log(newVal)
-                console.log(typeof(newVal))
-                num_array[num_array.length-1]=newVal;       
+                let newVal=0 - numberArray[numberArray.length-1];
+                // console.log(newVal)
+                // console.log(typeof(newVal))
+                numberArray[numberArray.length-1]=newVal;       
                 }
             else{
-                let newVal=num_array[num_array.length-1]+this.value;
-                num_array[num_array.length-1]=Number(newVal);
+                let newVal=numberArray[numberArray.length-1]+this.value;
+                numberArray[numberArray.length-1]=Number(newVal);
                 }
             }
     }
     else if(flag1==false){
         document.getElementById("result").value+=this.value;
-        num_array.push(Number(this.value))
+        numberArray.push(Number(this.value))
         flag1=true;
     }
+    console.log(numberArray);
     
 }
 
-let oper_array = []    
-function clickOperations(){
+let operatorArray = []    
+function clickOperator(){
     flag1=false;
     document.getElementById("result").value+=this.value;
-    oper_array.push(this.value)
+    operatorArray.push(this.value)
+    console.log(operatorArray)
 }
 
-function evalFunc(){
-    let totalValue = num_array[0];
-    console.log(num_array)
-    for(i=0;i<num_array.length-1;i++){
-        if (oper_array[i] == "+"){
-            totalValue = totalValue + num_array[i+1];
+function performOperation(){
+    let totalValue = numberArray[0];
+    console.log(numberArray)
+    for(i=0;i<numberArray.length-1;i++){
+        if (operatorArray[i] == "+"){
+            totalValue = totalValue + numberArray[i+1];
         }
-        else if(oper_array[i] == "-"){
-            totalValue = totalValue - num_array[i+1];
+        else if(operatorArray[i] == "-"){
+            totalValue = totalValue - numberArray[i+1];
         }
-        else if(oper_array[i]=="*"){
-            totalValue = totalValue * num_array[i+1];
+        else if(operatorArray[i]=="*"){
+            totalValue = totalValue * numberArray[i+1];
         }
-        else if(oper_array[i]=="/"){
-            totalValue = totalValue / num_array[i+1];
+        else if(operatorArray[i]=="/"){
+            totalValue = totalValue / numberArray[i+1];
         }
     }
 
-    if(oper_array[i]=="%"){
+    if(operatorArray[i]=="%"){
         totalValue = totalValue / 100;
     }
     document.getElementById("result").value = totalValue;
+    console.log(totalValue)
 }
 let clear=document.getElementById("clear").addEventListener("click",()=>{
     if(document.getElementById("result").value="AC"){
     document.getElementById("result").value="";
-    num_array=[];
-    oper_array=[];
-    console.log(num_array)  
+    numberArray=[];
+    operatorArray=[];
+    console.log(numberArray)  
 }
 })

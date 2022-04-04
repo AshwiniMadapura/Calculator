@@ -73,6 +73,7 @@ function clickNumber(){
         num_array.push(Number(this.value))
         flag1=true;
     }
+    console.log(num_array);
     
 }
 
@@ -81,6 +82,7 @@ function clickOperations(){
     flag1=false;
     document.getElementById("result").value+=this.value;
     oper_array.push(this.value)
+    console.log(oper_array)
 }
 
 function evalFunc(){
@@ -106,6 +108,7 @@ function evalFunc(){
         totalValue = totalValue / 100;
     }
     document.getElementById("result").value = totalValue;
+    console.log(totalValue)
 }
         
 // const buttons=document.querySelectorAll(".buttonDesign")

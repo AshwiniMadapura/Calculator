@@ -1,7 +1,7 @@
 # Calculator
-This is a simple Calculator which perform basic operations like "+", "-", "*", "/", "%", "+/-"
+This is a simple Calculator which perform basic operations like "+", "-", "*", "/", "%"
 
-This Calculator is build by using JavaScript, HTML,SCSS.
+This Calculator is built by using JavaScript, HTML and SCSS.
 
 Working scenarios:
 
@@ -17,7 +17,7 @@ Working scenarios:
       Eg: 5%
       (when hit on = output will be 0.05)
       
-- outputs negetive values for oprations like,
+- outputs negative values for operations like,
       56-100
       (when hit on = output will -44)
       

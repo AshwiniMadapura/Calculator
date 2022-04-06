@@ -38,7 +38,7 @@ function clickNumber(){
                 numberArray[numberArray.length-1]=Number(newVal);
                 }
             }
-    }
+    } 
     else if(flag1==false){
         document.getElementById("result").value+=this.value;
         numberArray.push(Number(this.value))

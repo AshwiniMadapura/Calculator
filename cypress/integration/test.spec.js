@@ -10,11 +10,11 @@ describe("Works for single digit",()=>{
         cy.visit("http://127.0.0.1:5502/index.html")
 
         cy.get("#9").click();
-        cy.get("#plus").click();
+        cy.get("#subtract").click();
         cy.get("#5").click();
         cy.get(".eqOperator").click();
 
-        cy.get(".display").should("have.value",14)
+        cy.get(".display").should("have.value",4)
     })
 })
 
@@ -32,6 +32,7 @@ describe("Works for multiple digits",()=>{
         cy.get(".display").should("have.value",154)
     })
 })
+
 
 describe("Works for chained operations",()=>{
     it("Calculates chained operations",()=>{

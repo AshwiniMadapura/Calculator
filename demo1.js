@@ -91,7 +91,7 @@ function evalFunc(){
     for(i=0;i<num_array.length-1;i++){
 
         if (oper_array[i] == "+"){
-            totalValue = totalValue + num_array[i+1];
+            totalValue = Number(totalValue)  + Number(num_array[i+1]) ;
         }
         else if(oper_array[i] == "-"){
             totalValue = totalValue - num_array[i+1];

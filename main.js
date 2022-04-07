@@ -5,86 +5,89 @@ const numButtons=document.querySelectorAll(".buttonDesign")
 
 const opeButtons=document.querySelectorAll(".operator")
     opeButtons.forEach(item=>{
-        item.addEventListener("click",clickOperator);
+        item.addEventListener("click",clickOperations);
 })
 
 const eqButton=document.querySelectorAll(".eqOperator")
     eqButton.forEach(item=>{
-        item.addEventListener("click",performOperation);
+        item.addEventListener("click",evalFunc);
 })
 
-let numberArray = []
+let num_array = []
 let flag1=true
 
+let clear=document.getElementById("clear").addEventListener("click",()=>{
+    if(document.getElementById("result").value="AC"){
+    document.getElementById("result").value="";
+    num_array=[];
+    oper_array=[];
+    console.log(num_array)  
+}
+})
+
 function clickNumber(){
+    
     if(flag1==true){
         document.getElementById("result").value+=this.value;
-        if(numberArray.length==0){ 
-                numberArray[0]=this.value;
+        if(num_array.length==0){ 
+                num_array[0]=this.value;
             }
         else{
             if(this.value == "."){
-                let newVal=numberArray[numberArray.length-1]+this.value;
-                numberArray[numberArray.length-1]=newVal;       
+                let newVal=num_array[num_array.length-1]+this.value;
+                num_array[num_array.length-1]=newVal;       
             }
             else if(this.value == "+-"){
-                let newVal=0 - numberArray[numberArray.length-1];
-                // console.log(newVal)
-                // console.log(typeof(newVal))
-                numberArray[numberArray.length-1]=newVal;       
+                let newVal=0 - num_array[num_array.length-1];
+                console.log(newVal)
+                console.log(typeof(newVal))
+                num_array[num_array.length-1]=newVal;       
                 }
             else{
-                let newVal=numberArray[numberArray.length-1]+this.value;
-                numberArray[numberArray.length-1]=Number(newVal);
+                let newVal=num_array[num_array.length-1]+this.value;
+                num_array[num_array.length-1]=Number(newVal);
                 }
             }
-    } 
+    }
     else if(flag1==false){
         document.getElementById("result").value+=this.value;
-        numberArray.push(Number(this.value))
+        num_array.push(Number(this.value))
         flag1=true;
     }
-    console.log(numberArray);
+    console.log(num_array);
     
 }
 
-let operatorArray = []    
-function clickOperator(){
+let oper_array = []    
+function clickOperations(){
     flag1=false;
     document.getElementById("result").value+=this.value;
-    operatorArray.push(this.value)
-    console.log(operatorArray)
+    oper_array.push(this.value)
+    console.log(oper_array)
 }
 
-function performOperation(){
-    let totalValue = numberArray[0];
-    console.log(numberArray)
-    for(i=0;i<numberArray.length-1;i++){
-        if (operatorArray[i] == "+"){
-            totalValue = totalValue + numberArray[i+1];
+function evalFunc(){
+    let totalValue = num_array[0];
+    console.log(num_array)
+    for(i=0;i<num_array.length-1;i++){
+
+        if (oper_array[i] == "+"){
+            totalValue = Number(totalValue)  + Number(num_array[i+1]) ;
         }
-        else if(operatorArray[i] == "-"){
-            totalValue = totalValue - numberArray[i+1];
+        else if(oper_array[i] == "-"){
+            totalValue = totalValue - num_array[i+1];
         }
-        else if(operatorArray[i]=="*"){
-            totalValue = totalValue * numberArray[i+1];
+        else if(oper_array[i]=="*"){
+            totalValue = totalValue * num_array[i+1];
         }
-        else if(operatorArray[i]=="/"){
-            totalValue = totalValue / numberArray[i+1];
+        else if(oper_array[i]=="/"){
+            totalValue = totalValue / num_array[i+1];
         }
     }
 
-    if(operatorArray[i]=="%"){
+    if(oper_array[i]=="%"){
         totalValue = totalValue / 100;
     }
     document.getElementById("result").value = totalValue;
     console.log(totalValue)
 }
-let clear=document.getElementById("clear").addEventListener("click",()=>{
-    if(document.getElementById("result").value="AC"){
-    document.getElementById("result").value="";
-    numberArray=[];
-    operatorArray=[];
-    console.log(numberArray)  
-}
-})
